@@ -77,11 +77,11 @@ gem install hexx-api
 Compatibility
 -------------
 
-Tested under rubies compatible to API 1.9.3+:
+Tested under rubies compatible to API 1.9.2+:
 
-* MRI 1.9.3+
-* Rubinius-2+
-* JRuby-2+
+* MRI 1.9.2+
+* Rubinius-2+ (modes 1.9+)
+* JRuby-1.7+
 
 Uses [RSpec] 3.0+ for testing and [hexx-suit] for dev/test tools collection.
 

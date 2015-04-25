@@ -3,10 +3,10 @@ language: ruby
 bundler_args: --without metrics
 script: rake test:coverage:run
 rvm:
+  - "1.9.2"
   - "1.9.3"
   - "2.2"
   - rbx-2 --1.9
   - rbx-2 --2.1
-  - jruby-1.6.8
   - jruby-1.7.19
   - jruby-9.0.0.0.pre1
