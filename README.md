@@ -79,7 +79,7 @@ Compatibility
 
 Tested under rubies compatible to API 1.9.2+:
 
-* MRI 1.9.2+
+* MRI 1.9.3+
 * Rubinius-2+ (modes 1.9+)
 * JRuby-1.7+
 
