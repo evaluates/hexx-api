@@ -38,7 +38,9 @@ module Hexx
     # @return [self] itself
     def api_method(name, type, method = :new)
       __api__[name.to_sym] = type
-      singleton_class.__send__(:define_method, name) { type.public_send method }
+      singleton_class.__send__(:define_method, name) do |*args|
+        type.public_send method, *args
+      end
 
       self
     end

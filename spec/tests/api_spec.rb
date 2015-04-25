@@ -20,6 +20,8 @@ describe Hexx::API do
 
   describe ".api_method" do
 
+    let(:args) { [:qux, :quxx, :quxxx] }
+
     context "without third argument" do
 
       subject { test.api_method :foo, foo }
@@ -34,7 +36,8 @@ describe Hexx::API do
 
       it "defines #foo as [:foo].new" do
         subject
-        expect(test.foo).to eq :foo
+        expect(foo).to receive(:new).with(*args)
+        expect(test.foo(*args)).to eq :foo
       end
 
     end # context
@@ -49,7 +52,8 @@ describe Hexx::API do
 
       it "defines #foo as custom method" do
         subject
-        expect(test.foo).to eq :baz
+        expect(foo).to receive(:bar).with(*args)
+        expect(test.foo(*args)).to eq :baz
       end
 
     end # context
