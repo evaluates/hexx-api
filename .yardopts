@@ -1,0 +1,3 @@
+--asset LICENSE
+--exclude lib/hexx/api/version.rb
+--output doc/api
